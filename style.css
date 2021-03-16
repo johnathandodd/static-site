@@ -19,7 +19,6 @@ body {
 
 nav {
   font-weight: bold;
-  color: var(--textColour);
 }
 
 nav li {
@@ -37,14 +36,16 @@ nav ul {
 
 a {
   text-decoration: none;
+  color: var(--highlightColour);
 }
 
-a:visited {
+/* a:visited {
   color: var(--textColour);
-}
+} */
 
 a:hover {
-  color: var(--highlightColour);
+  /* color: var(--highlightColour); */
+  text-decoration: underline;
 }
 
 /* #skills, #history, #projects, #education {
