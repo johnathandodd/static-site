@@ -11,12 +11,6 @@ body {
   background-color: rgb(245, 245, 245);
 }
 
-@media screen and (max-width: 900px) and (min-width: 1px) {
-  body {
-	font-size: 1.3em;
-  }
-}
-
 nav {
   font-weight: bold;
   color: var(--textColour);
