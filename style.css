@@ -47,6 +47,6 @@ a:hover {
   color: var(--highlightColour);
 }
 
-#skills, #history, #projects, #education {
+/* #skills, #history, #projects, #education {
   background-color: indigo;
 }
