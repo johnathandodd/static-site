@@ -11,9 +11,10 @@ body {
   background-color: rgb(245, 245, 245);
 }
 
-@media screen and (min-width: 375px) {
+@media only screen and (max-width: 1000px) {
   body {
-	font-size: 2.5em;
+    background-color: lightblue;
+    font-size: 2.5em;
   }
 }
 
