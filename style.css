@@ -13,8 +13,7 @@ body {
 
 @media only screen and (max-width: 1000px) {
   body {
-    background-color: lightblue;
-    font-size: 2.5em;
+    font-size: 3em;
   }
 }
 
@@ -48,6 +47,6 @@ a:hover {
   color: var(--highlightColour);
 }
 
-/* #skills, #history, #projects, #education {
+#skills, #history, #projects, #education {
   background-color: indigo;
 }
