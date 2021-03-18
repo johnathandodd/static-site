@@ -2,6 +2,36 @@
 
 <html lang="en">
 
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+    </script>
+
 <head>
   <meta charset="utf-8">
   <title>Johnathan Dodd</title>
@@ -9,7 +39,7 @@
   <meta name="author" content="Johnathan Dodd">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="globalLayout.css">
-  <script src="https://unpkg.com/website-carbon-badges@1.1.1/b.min.js" defer></script>
+   
 </head>
 
 <body>
@@ -29,18 +59,16 @@
     </div>
   </nav>
 
-  <!-- <nav>
-    <ul>
-      <li><a href="work.html">Work</a></li>
-      <li><a href="cv.html">CV</a></li>
-    </ul>
-  </nav>
-  <h1><img src="img/logo.svg"></img></h1> -->
   <h2>Senior Graphic Designer<br>Creative Lead<br>Art Director<br>Full Stack Designer</h2>
   <p>I’m Johnathan Dodd, a multi-disciplinary creative from the UK. Currently working as a Full Stack Designer in London, creating and developing digital campaigns, branding and establishing UX solutions for brands for over 15 years. Proficient in Graphic Design, Interactive Design, Conceptual Ideation and Art Direction using all the latest software. I enjoy a drop of IPA every now and again, going to muddy music festivals and watching the latest and greatest films & TV shows. A huge Star Wars fan, I’ve only ever been beaten at Star Wars Trivial Pursuit once.</p>
   <p>But that was a fix&hellip;</p>
 
-  <div id="wcb" class="carbonbadge"></div>
+
+  <div w3-include-html="links.html"></div>
+
+  <script>
+    includeHTML();
+    </script>
 
 </body>
 
