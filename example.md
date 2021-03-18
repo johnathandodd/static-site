@@ -1,3 +1,0 @@
-# This header
-
-is markdown
