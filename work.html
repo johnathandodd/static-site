@@ -9,33 +9,19 @@
   <meta name="author" content="Johnathan Dodd">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="globalLayout.css">
+  <script src="htmlIncludes.js"></script>
 </head>
 
 <body>
 
-  <nav>
-    <div class="headerBox">
-      <div class="flex-item">
-        <a href="index.html"><img src="img/logo.svg" width="50%"></a></img>
-      </div>
-      <div class="flex-item">&nbsp;</div>
-      <div class="flex-item">
-        <ul>
-          <li>Work</li>
-          <li><a href="cv.html">CV</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <nav w3-include-html="nav.html"></nav>
 
-  <!-- <nav>
-    <ul>
-      <li>Work</li>
-      <li><a href="cv.html">CV</a></li>
-    </ul>
-  </nav>-->
   <h1>Work</h1>
   <p>This is my site, OLD CONTENT</p>
+
+  <script>
+    includeHTML();
+  </script>
 
 </body>
 
