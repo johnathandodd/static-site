@@ -1,0 +1,4 @@
+@import "globalLayout.css";
+@import "style.css";
+
+@import "mobileLayout.css" screen and (max-width: 1000px);
