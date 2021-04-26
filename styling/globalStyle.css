@@ -13,7 +13,7 @@ body {
   font-family: var(--fontStackSystem);
   font-size: 1.6em;
   color: var(--almostBlack);
-  background-color: var(--veryLightGrey);
+  background-color: var(--almostBlack);
 }
 
 nav {
