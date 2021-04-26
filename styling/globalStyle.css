@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: var(--fontStackSystem);
+  font-family: var(--fontStackGeorgia);
   font-size: 1.6em;
   color: var(--veryLightGrey);
   background-color: var(--almostBlack);
@@ -46,6 +46,10 @@ a {
 a:hover {
   /* color: var(--brightBlue); */
   text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fontStackSystem);
 }
 
 /* #skills, #history, #projects, #education {
